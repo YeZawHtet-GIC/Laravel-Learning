@@ -13,9 +13,9 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 // // Route::get('/test', function () {
 // //     return view('example');
 // // });
@@ -28,3 +28,6 @@ use App\Http\Controllers\ArticleController;
 // });
 
 Route::resource('test3', ArticleController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
